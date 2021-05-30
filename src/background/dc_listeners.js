@@ -1,7 +1,5 @@
-const { remote } = require("electron");
-const mainProcess = remote.require("./main.js");
-
-const client = mainProcess.getDCJSClient();
+const client = require("../../main.js").getDCJSClient();
+const utilClasses = require("../../main.js").getUtilClasses();
 
 client.on('ready', () => {
   	console.log(`Logged in as ${client.user.tag}!`);
@@ -31,7 +29,7 @@ client.on('ready', () => {
 			document.getElementsByTagName("head")[0].appendChild(link);
 		}*/
 		
-		cache = new ClientCache();
+		cache = new utilClasses.ClientCache();
 		//cache.guilds = [];
 		//cache.current_guild = -1;
 		/*var guilds = client.guilds.cache.array();
@@ -41,9 +39,9 @@ client.on('ready', () => {
 		}*/
 		console.log(cache);
 		
-		if(clientWindow && !clientWindow.loadDone) {
-			clientWindow.onLoaded();
-		}
+//		if(clientWindow && !clientWindow.loadDone) {
+//			clientWindow.onLoaded();
+//		}
 	} catch(error) {
 		//alert("Error while loading:\n" + error);
 		console.error(error);

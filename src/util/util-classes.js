@@ -1,3 +1,5 @@
+var client;
+
 class ClientCache {
 	#guilds; #channels; #current;
 	
@@ -380,3 +382,11 @@ class StateManager {
 		return this.#states[this.state];
 	}
 }
+
+exports.create = (newClient) => { client = newClient; };
+exports.ClientCache = ClientCache;
+exports.Guild = Guild;
+exports.Category = Category;
+exports.Channel = Channel;
+exports.Message = Message;
+exports.StateManager = StateManager;

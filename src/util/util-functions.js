@@ -116,3 +116,15 @@ function decrypt(salt, encoded) {
 	  .map((charCode) => String.fromCharCode(charCode))
 	  .join("");
 }
+
+exports.copyToClipboard = copyToClipboard;
+exports.getChannelByName = getChannelByName;
+exports.getUserByName = getUserByName;
+exports.getRoleByName = getRoleByName;
+exports.getEmojiByName = getEmojiByName;
+exports.embed = embed;
+exports.setTheme = setTheme;
+exports.$ = $;
+exports.getSalt = getSalt;
+exports.encrypt = encrypt;
+exports.decrypt = decrypt;

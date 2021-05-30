@@ -1,6 +1,8 @@
 var token;
 var clientWindow;
-var client = new Discord.Client();
+const { remote } = require("electron");
+const mainProcess = remote.require("./main.js");
+var client = mainProcess.getDCJSClient();
 var cache;
 var loaded = false;
 
