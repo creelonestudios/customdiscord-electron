@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="theme-dark">
+<head>
+	<title>Custom Discord</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../styles/themes.css">
+	<link rel="stylesheet" href="../styles/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+	<script type="text/javascript" src="../discordjs/discord.v12.min.js"></script>
+	<script type="text/javascript" src="../util/popup.js"></script>
+	<script type="text/javascript" src="../util/div-creator.js"></script>
+	<script type="text/javascript" src="../util/message-parser.js"></script>
+	<script type="text/javascript" src="../util/util-functions.js"></script>
+	<script type="text/javascript" src="../util/util-classes.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="platform.js"></script>
+</head>
+<body>
+	<div id="popups"></div>
+	<div id="loading">
+		<div><img src="../img/loading.gif"></div>
+		<div>Hold tight.<br><div id="loadingtext">Loading CustomDiscord...</div></div>
+		<p style="display: none;" id="loadingaddon">Loading Addon ERROR...</p>
+	</div>
+	<div id="client" tabindex="0">
+		<div id="guild-region">
+			<div id="guild-list"></div>
+		</div>
+		<div id="channel-region">
+			<div id="channel-list"></div>
+			
+			
+			<div id="user-region">
+				<div id="user-region-avatar"></div>
+				<div id="user-region-main">
+					<div id="user-region-name">Username#1234</div>
+					<div id="user-region-status"></div>
+				</div>
+				<div id="user-region-settings"><div></div></div>
+			</div>
+		</div>
+		<div id="chat-region">
+			<div id="chat-history"></div>
+			<div id="previewbox" style="display: none">
+				<div id="previewbox-inner">aaa</div>
+			</div>
+			<div id="inputbox">
+				<div id="inputbox-inner" contenteditable="true"></div>
+				<div id="typing"></div>
+				<div id="inputbox-placeholder">Send messages to #channel</div>
+			</div>
+			
+			<!--<input type="checkbox" id="autoswitch">Autoswitch<br>-->
+			
+			<!--<input type="button" id="send" value="Send" onclick="sendMsg()">-->
+		</div>
+		<div id="member-region">
+			<div style="margin-left: 10px">
+				<!--<a href="settings" target="_blank">Settings</a><br>-->
+				<b>CustomDiscord Dev</b><br>
+				<!--<button onclick="setTheme('theme-dark')">🌙 Switch to Dark Theme</button><br>
+				<button onclick="setTheme('theme-default')">🌞 Switch to Light Theme</button><br>
+				<button onclick="setTheme('')">🚫 Remove Theme</button>
+				<button id="btnstatuschange">Change Status</button>-->
+			</div>
+		</div>
+	</div>
+	<div id="settings">
+		<h1>Settings</h1>
+		<div id="settings-list"></div>
+		<div id="settings-main"></div>
+	</div>
+</body>
+</html>

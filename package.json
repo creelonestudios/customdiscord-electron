@@ -1,0 +1,73 @@
+{
+  "name": "customdiscord",
+  "productName": "CustomDiscord",
+  "version": "1.0.0",
+  "description": "The CustomDiscord Desktop Client",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "customdiscord",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icons/win.ico"
+    },
+    "nsis": {
+      "installerIcon": "icons/win.ico",
+      "uninstallerIcon": "icons/win.ico",
+      "uninstallDisplayName": "CustomDiscord",
+      "license": "LICENSE",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "Creelone",
+    "email": "creelone.studios@gmail.com"
+  },
+  "license": "SEE LICENSE",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "customdiscord"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "13.0.1",
+    "electron-builder": "^22.10.5"
+  }
+}
