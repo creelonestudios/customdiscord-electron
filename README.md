@@ -5,7 +5,7 @@ Das ist CustomDiscord! Wir (Creelone) arbeiten momentan an diesem Projekt.
 Dies ist eine Chrome-Extension.
 Sie funktioniert sogar im neuen Edge!
 
-CustomDiscord benötigt <img src="https://discord.js.org/favicon.ico" alt="" width="24"/> [Discord.JS](https://github.com/discordjs/discord.js/tree/webpack).
+CustomDiscord benötigt <img src="https://discord.js.org/favicon.ico" alt="" width="24"/> [Discord.JS](https://github.com/discordjs/discord.js).
 
 ## Made by
 
@@ -13,23 +13,25 @@ CustomDiscord benötigt <img src="https://discord.js.org/favicon.ico" alt="" wid
 
 @cfpwastaken [🌐Website](https://cfp.gotdns.ch) [💬Discord](https://www.discord.gg/w9B9bqJ)
 
+## Testing
+
+0. Git, node, npm benötigt!
+1. Clone die repository: `git clone https://github.com/creelone/customdiscord`
+2. Installiere die NPM Packages: `npm i`
+3. Starten: `npm run start`
+4. Neustarten: `rs`
+
 ## Installation
 
-1. Gehen Sie zu [chrome://extensions/](chrome://extensions/).
-2. Aktivieren Sie den Entwicklermodus.
-3. Klicken Sie auf "Entpackte Erweiterung laden" bzw. "Entpackte Dateien Laden".
-4. Wählen Sie CustomDiscord aus und klicken Sie auf "Ordner auswählen".
-5. Die Erweiterung ist nun installiert.
+Wir haben CustomDiscord bereits compiled:
 
-## Launch
+1. Von releases runterladen
+2. Ausführen
+3. Durch den Setup gehen halt
 
-Zum Öffnen von CustomDiscord können Sie eine dieser Möglichkeiten benutzen:
+Compilen:
 
-* Rechtsklick auf beliebiger Webseite > Custom Discord
-* Rechtklick auf Extension Icon > Launch
-* Linksklick auf Extension Icon
-
-CustomDiscord sollte sich darauf folgend in einem neuen Fenster öffnen.
+1. Es ist `npm run build` lmao
 
 ## Login
 
